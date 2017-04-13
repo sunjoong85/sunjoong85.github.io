@@ -16,5 +16,9 @@ https://reacttraining.com/react-router/web/example/basic
 
 ## parse css to a vendor specific style
 https://github.com/postcss/autoprefixer
+
+## react hot loader
+https://velopert.com/2037
+
 ## Presentaional vs container components
 https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0
