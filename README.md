@@ -2,7 +2,7 @@
 Sunjoong Kevin Kim Blog
 
 ## PWA Introduction
-PWA is a concept which provides user experiences that have the reach of the web.
+PWA is a concept which provides user experiences that have the reach of the web. (Better web)
 
 1. Reliable - Work on any network conditions. service worker acting like a proxy which has full control of caches of key resources.
   Even work offline.
