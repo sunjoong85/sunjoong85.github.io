@@ -37,7 +37,7 @@ https://developers.google.com/web/progressive-web-apps/checklist
   
 ## Top Priority
 ### HTTPs & H2
-### Service Worker
+### Service Worker & Server Push
 ### Home Screen & Full Screen Experience
 ### Push Notification
 ### Device API
