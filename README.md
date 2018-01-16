@@ -38,10 +38,18 @@ https://developers.google.com/web/progressive-web-apps/checklist
   
 ### HTTPs
 Protect caches, iamges, user data and all resources from all sort of attack.
-
-### Service Worker
+### Fast & Reliable
+Cache by service worker which enables work offline. Implements architecture pattern like App Shell Model.
+Fast Transition, Smooth animation and scroll. Transition immediately.
+#### Service Worker
 Cache. Work offline, Fast
+#### Skeleton UI
 #### App Shell Model
 Caches using service worker. cache infra ui like navigation and layout. (JS, HTML ,CSS)
 First show base layout. Then load contents dynamically.
 
+### Engagement
+#### Home screen
+#### Full screen experience
+#### Push Notification
+#### Device API
