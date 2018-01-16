@@ -37,6 +37,8 @@ https://developers.google.com/web/progressive-web-apps/checklist
   
 ## Top Priority
 ### HTTPs & H2
+  - Node Koa
+  - SSL for test : https://www.akadia.com/services/ssh_test_certificate.html
 ### Service Worker & Server Push
 ### Home Screen & Full Screen Experience
 ### Push Notification
