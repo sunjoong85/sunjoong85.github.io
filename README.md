@@ -2,6 +2,8 @@
 Sunjoong Kevin Kim Blog
 
 ## PWA Introduction
-1. Reliable - 
-2. Fast
-3. Engaging
+1. Reliable - Work on any network conditions. 
+2. Fast - Load instantly
+3. Engaging - Much more feel like a native
+
+
