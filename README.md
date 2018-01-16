@@ -34,3 +34,14 @@ https://developers.google.com/web/progressive-web-apps/checklist
   -> Show skeleton screen on transition and move to next page immediately
 8. Each page has a URL
   -> SPA. use router
+  
+  
+### HTTPs
+Protect caches, iamges, user data and all resources from all sort of attack.
+
+### Service Worker
+Cache. Work offline, Fast
+#### App Shell Model
+Caches using service worker. cache infra ui like navigation and layout. (JS, HTML ,CSS)
+First show base layout. Then load contents dynamically.
+
