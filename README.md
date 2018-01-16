@@ -35,7 +35,14 @@ https://developers.google.com/web/progressive-web-apps/checklist
 8. Each page has a URL
   -> SPA. use router
   
-  
+## Top Priority
+### HTTPs & H2
+### Service Worker
+### Home Screen & Full Screen Experience
+### Push Notification
+### Device API
+
+## Deep Dive..  
 ### HTTPs
 Protect caches, iamges, user data and all resources from all sort of attack.
 ### Fast & Reliable
@@ -47,9 +54,9 @@ Cache. Work offline, Fast
 #### App Shell Model
 Caches using service worker. cache infra ui like navigation and layout. (JS, HTML ,CSS)
 First show base layout. Then load contents dynamically.
-
 ### Engagement
 #### Home screen
 #### Full screen experience
 #### Push Notification
 #### Device API
+#### Payment
