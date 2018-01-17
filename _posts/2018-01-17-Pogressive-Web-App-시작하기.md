@@ -1,3 +1,9 @@
+---
+title: Progressive Web App 시작하기
+layout: post
+categories: PWA
+---
+
 # sunjoong85.github.io
 Sunjoong Kevin Kim Blog
 
@@ -6,12 +12,12 @@ PWA is a concept which provides user experiences that have the reach of the web.
 
 1. Reliable - Work on any network conditions. service worker acting like a proxy which has full control of caches of key resources.
   Even work offline.
-  
+
 2. Fast - Load instantly
   -> more then 3 seconds for loading -> 53% of users abandon a site
   -> No janky scroll, response immediately.
   -> More visiting, More staying
-  
+
 3. Engaging - Much more feel like a native. Home Screen. Immersive full screen experience. Push notification.
 
 
@@ -34,7 +40,7 @@ https://developers.google.com/web/progressive-web-apps/checklist
   -> Show skeleton screen on transition and move to next page immediately
 8. Each page has a URL
   -> SPA. use router
-  
+
 ## Top Priority
 ### HTTPs & H2
   - Node Koa
@@ -62,4 +68,3 @@ First show base layout. Then load contents dynamically.
 #### Push Notification
 #### Device API
 #### Payment
-
