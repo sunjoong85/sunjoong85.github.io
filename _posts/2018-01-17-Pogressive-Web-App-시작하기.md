@@ -9,7 +9,7 @@ PWA는 보다 나은 웹 사용 경험을 제공합니다. 다음 세 가지 주
 1. 신뢰할 수 있다 (Reliable)  
 네트워크 환경이 느린 곳 심지어 오프라인 환경에서도 동작해야합니다. 중요한 자원(JS, HTML, CSS, Image 등)은 즉시 로드되어야 합니다. 이를 위해서 Server Push, Service Worker 를 사용합니다.
 
-2. 빠르다 (Fast)
+2. 빠르다 (Fast)  
 화면 로딩에 3초 이상의 시간이 걸리면 53%의 사용자는 해당 사이트를 재방문 하지 않습니다. 버벅이는 스크롤링이 없어야 하고 애니매이션은 부드러워야 합니다. 유저 인터렉션은 즉각적이어야 합니다.
 
 3. 네이티브 친화적이다 (Engaging)  
@@ -35,4 +35,4 @@ PWA 체크 리스트 [Google PWA Checklist](https://developers.google.com/web/pr
 웹 사이트가 progressive 한지 여부는 [Chrome Light House](https://developers.google.com/web/tools/lighthouse/) 를 통해서 측정 가능합니다. 측정이 가능해야 개선할 수 있습니다.
 
 ## 참고 자료
-https://developers.google.com/web/progressive-web-apps/
+[Google Progressive Web App](https://developers.google.com/web/progressive-web-apps/)
