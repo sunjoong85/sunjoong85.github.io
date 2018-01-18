@@ -1,6 +1,7 @@
 title: Progressive Web App - 시작하기
 layout: post
 categories: PWA
+comments : true
 ---
 
 ## PWA(Progressive Web App) 에 대한 소개
@@ -35,10 +36,10 @@ PWA 체크 리스트 [Google PWA Checklist](https://developers.google.com/web/pr
 측정이 가능해야 개선할 수 있습니다.[Chrome Light House](https://developers.google.com/web/tools/lighthouse/)는 PWA 수준을 측정해 줍니다.
 
 ## 앞으로 다룰 내용
-- HTTP2 & HTTPs  
-HTTPs 를 통해 보안을 강화하고 H2(HTTP2) 를 통해 네트워크 활용도를 높입니다.
+- HTTP/2 & HTTPs  
+HTTPs 를 통해 보안을 강화하고 H2(HTTP/2) 를 통해 네트워크 활용도를 높입니다.
 * Service Worker & Server Push  
-중요 자원을 캐시하여 매우 빠른 로딩을 구현합니다.
+중요 자원을 캐시하여 매우 빠른 로딩을 구현합니다. 또한 오프라인에서 동작 가능하도록 합니다.
 - Loading Optimization  
 PRPL 패턴, Code Splitting & Tree Shaking, Resource 우선순위에 대해 다룹니다.
 - Manifest  
@@ -47,6 +48,6 @@ PRPL 패턴, Code Splitting & Tree Shaking, Resource 우선순위에 대해 다�
 네이티브 디바이스 API 를 활용합니다.
 - Push Notification  
 네이티브의 Push Notification 기능을 사용합니다.
- 
+
 ## 참고 자료
 [Google Progressive Web App](https://developers.google.com/web/progressive-web-apps/)
