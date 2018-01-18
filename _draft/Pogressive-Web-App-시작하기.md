@@ -1,3 +1,4 @@
+---
 title: Progressive Web App 시작하기
 layout: post
 categories: PWA
@@ -21,18 +22,49 @@ PWA 는 보다 나은 웹을 개발하기 위한 컨셉으로 이해하면 됩�
 
 PWA 체크 리스트 [Google PWA Checklist](https://developers.google.com/web/progressive-web-apps/checklist) 에서 확인 가능합니다.
 
+
+
 ### 기본 원칙
 1. 사이트는 HTTPs를 통해 제공되어야 합니다.
 2. 테블릿 또는 모바일 다비이스에서 반응형(responsive) 디자인을 제공해야 합니다.  
 3. 오프라인에서 동작해야 합니다.
 4. 홈 스크린에 추가되어야 합니다.
 5. 3G 환경에서도 빠르게 로드되어야 합니다.
-6. 크로스 브라우저(cross-browser)에서 동작해야 합니다.
-7. 화면 전환은 즉각적이며 네트워크 지연을 느낄 수 없어야 합니다.
-8. 각각의 화면은 URL로 표현되어야 합니다.
-
+6. 크로스 브라우저(cross-browser) 를 제공해야 합니다.
+7. Page transitions don't feel like they block on the network
+  -> Show skeleton screen on transition and move to next page immediately
+8. Each page has a URL
+  -> SPA. use router
 
 웹 사이트가 progressive 한지 여부는 [Chrome Light House](https://developers.google.com/web/tools/lighthouse/) 를 통해서 측정 가능합니다. 측정이 가능해야 개선할 수 있습니다.
 
 ## 참고 자료
 https://developers.google.com/web/progressive-web-apps/
+
+## Top Priority
+### HTTPs & H2
+  - Node Koa
+  - SSL for test : https://www.akadia.com/services/ssh_test_certificate.html
+### Service Worker & Server Push
+### Home Screen & Full Screen Experience
+### Push Notification
+### Device API
+
+## Deep Dive..  
+### HTTPs
+Protect caches, iamges, user data and all resources from all sort of attack.
+### Fast & Reliable
+Cache by service worker which enables work offline. Implements architecture pattern like App Shell Model.
+Fast Transition, Smooth animation and scroll. Transition immediately.
+#### Service Worker
+Cache. Work offline, Fast
+#### Skeleton UI
+#### App Shell Model
+Caches using service worker. cache infra ui like navigation and layout. (JS, HTML ,CSS)
+First show base layout. Then load contents dynamically.
+### Engagement
+#### Home screen
+#### Full screen experience
+#### Push Notification
+#### Device API
+#### Payment
