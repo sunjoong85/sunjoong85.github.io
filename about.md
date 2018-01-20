@@ -3,4 +3,4 @@ layout: page
 title: About
 permalink: /about/
 ---
-Full stack Engineer / JavaScript, Node, Swift
+Full Stack Engineer / JavaScript, Node, Swift
