@@ -24,7 +24,7 @@ PWA 는 보다 나은 웹을 개발하기 위한 컨셉으로 이해하면 됩�
 PWA 체크 리스트 [Google PWA Checklist](https://developers.google.com/web/progressive-web-apps/checklist) 에서 확인 가능합니다.
 
 ### 측정
-측정이 가능해야 개선할 수 있습니다.[Chrome Light House](https://developers.google.com/web/tools/lighthouse/)는 PWA 수준을 측정해 줍니다.
+측정이 가능해야 개선할 수 있습니다.[Chrome Lighthouse](https://developers.google.com/web/tools/lighthouse/)는 PWA 수준을 측정해 줍니다.
 
 ### 기본 원칙
 1. 사이트는 HTTPs를 통해 제공되어야 합니다.  
