@@ -51,7 +51,7 @@ Test : 매우 낮은 속도의 네트워크로 테스트. 각 버튼, 링크 클
   - 응답을 기다릴 땐 Loading Indicator를 보여준다.  
 Fix : SPA인 경우 [Skeleton Screen](http://hannahatkin.com/skeleton-screens/)을 보여준다.  
 8. 각각의 화면은 URL로 표현되어야 합니다.  
-Test : URL로 모든 페이지를 접근할 수 있어야함. URL은 유니크하고 소셜미디어를 통해 공유 가능해야 함. 브라우저 새창에서 URL을 테스트.
+Test : URL로 모든 페이지를 접근할 수 있어야함. URL은 유니크하고 소셜미디어를 통해 공유 가능해야 함. 브라우저 새창에서 URL을 테스트.  
 Fix : SPA의 경우 라우터를 사용하여 URL에 따라 앱의 상태를 바꾼다.
 
 ## 앞으로 다룰 내용
