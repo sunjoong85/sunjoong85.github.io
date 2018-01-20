@@ -39,7 +39,7 @@ PWA 체크 리스트 [Google PWA Checklist](https://developers.google.com/web/pr
 ## 앞으로 다룰 내용
 - HTTP/2 & HTTPs  
 HTTPs 를 통해 보안을 강화하고 H2(HTTP/2) 를 통해 네트워크 활용도를 높입니다.
-* Service Worker & Server Push  
+- Service Worker & Server Push  
 중요 자원을 캐시하여 매우 빠른 로딩을 구현합니다. 또한 오프라인에서 동작 가능하도록 합니다.
 - Loading Optimization  
 PRPL 패턴, Code Splitting & Tree Shaking, Resource 우선순위에 대해 다룹니다.
@@ -52,3 +52,27 @@ PRPL 패턴, Code Splitting & Tree Shaking, Resource 우선순위에 대해 다�
 
 ## 참고 자료
 [Google Progressive Web App](https://developers.google.com/web/progressive-web-apps/)
+
+
+{% if page.comments %}
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://sunjoongs-blog.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+{% endif %}
