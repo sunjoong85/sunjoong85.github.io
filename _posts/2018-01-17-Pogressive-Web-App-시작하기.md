@@ -50,7 +50,7 @@ Fix : responsive design, viewport-friendly 디자인 적용
 3. 모든 페이지(혹은 URL)는 오프라인에서 동작해야 합니다.  
 Test : Airplane 모드에서 페이지가 로드되는지 확인. 오프라인에서도 일부 컨텐츠가 보여져야 함. Lighthouse를 이용하여 오프라인에서 응답코드 200을 확인.  
 Fix : [ServiceWorker](https://developers.google.com/web/fundamentals/primers/service-workers/)
-4. 홈 스크린에 추가되어야 합니다.
+4. 홈 스크린에 추가되어야 합니다.  
 Test : Lighthouse에서 'User can be prompted to Add to Home screen' 항목이 모두 Yes인지 확인.  
 Fix : [Web App Manifest 파일](https://developers.google.com/web/fundamentals/web-app-manifest/)
 5. 3G 환경에서도 빠르게 로드되어야 합니다.  
