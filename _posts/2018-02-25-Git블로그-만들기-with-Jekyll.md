@@ -20,7 +20,7 @@ $ cd my-awesome-site
 
 # 빌드 및 로컬 서버 실행
 
-$ ~/my-awesome-site $ bundle exec jekyll serve
+~/my-awesome-site $ bundle exec jekyll serve
 
 # => 다음 url 에서 블로그의 모습을 확인할 수 있습니다. http://localhost:4000
 ```
