@@ -10,11 +10,15 @@ comments : true
 ## Jekyll 시작하기
 커맨드창에서 다음과 같이 실행합니다.
 ```
+# jekyll 설치
 $ gem install jekyll bundler
 
+# my-awesome-site 프로젝트 만들기
 $ jekyll new my-awesome-site
 
 $ cd my-awesome-site
+
+# 빌드 및 로컬 서버 실행
 
 $ ~/my-awesome-site $ bundle exec jekyll serve
 
@@ -45,13 +49,15 @@ setting 에서 git page 설정을 추가하면 내 블로그 url이 생성됩니
 
 ![Git Setting에서 page 설정]({{ "/assets/gitpage_setting.png"}})
 
-다시 my-awesome-site 폴더로 돌아가서 {_config.yml} 파일을 열어 봅니다.
-baseurl과 url정보를 수정해줍니다.
+다시 my-awesome-site 폴더로 돌아가서 `_config.yml` 파일을 열어 봅니다.
+`baseurl`과 `url` 속성을 수정해줍니다.
 
 {% highlight yml %}
 baseurl: "/jekyll-test"
 url: "https://sunjoong85.github.io"
 {% endhighlight %}
+
+이제 나의 md파일을 멋진 블로그 포스트로 바꿀 수 있습니다.
 
 ## 댓글 기능 추가하기
 [disqus](https://disqus.com/)를 내 블로그에 추가할 수 있습니다. 다음 블로그를 참고하면 도움을 받을 수 있습니다. [Jekyll 블로그에 Disqus 붙이기](https://cjh5414.github.io/Disqus/)
