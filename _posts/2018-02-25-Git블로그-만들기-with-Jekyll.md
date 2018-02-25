@@ -30,7 +30,7 @@ vm use ruby-2.4.1 --default
 ```
 
 ## Github repository 연결하기
-Github 에서 만든 repository에 위에서 만든 my-awesome-site를 push 합니다.
+Github에서 repository를 생성하고 my-awesome-site를 push 합니다.
 ```
 git init
 git add .
@@ -40,10 +40,18 @@ git push -u origin master
 ```
 
 ## GitPage 설정
-setting 에서 git page 설정을 추가하면 완성!
+setting 에서 git page 설정을 추가하면 내 블로그 url이 생성됩니다.
+(저는 jekyll-test 로 repository를 생성했습니다.)
 
 ![Git Setting에서 page 설정]({{ "/assets/gitpage_setting.png"}})
 
+다시 my-awesome-site 폴더로 돌아가서 {_config.yml} 파일을 열어 봅니다.
+baseurl과 url정보를 수정해줍니다.
+
+{% highlight yml %}
+baseurl: "/jekyll-test"
+url: "https://sunjoong85.github.io"
+{% endhighlight %}
 
 ## 댓글 기능 추가하기
 [disqus](https://disqus.com/)를 내 블로그에 추가할 수 있습니다. 다음 블로그를 참고하면 도움을 받을 수 있습니다. [Jekyll 블로그에 Disqus 붙이기](https://cjh5414.github.io/Disqus/)
