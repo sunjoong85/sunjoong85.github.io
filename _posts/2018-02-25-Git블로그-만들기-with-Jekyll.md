@@ -5,7 +5,7 @@ categories: Github Page
 comments : true
 ---
 # Jekyll 로 Github 블로그 만들기
-[Jekyll](https://jekyllrb.com/)은 마크다운을 이용하여 블로그를 생성해주는 도구입니다. Jekyll을 이용하면 Git Page와 연결하여 멋진 블로그를 만들 수 있습니다. 맥북 사용자를 대상으로 작성했습니다.
+[Jekyll](https://jekyllrb.com/)은 마크다운을 이용하여 블로그를 생성해주는 도구입니다. Jekyll을 이용하면 Git Page와 연결하여 멋진 블로그를 만들 수 있습니다. 
 
 ## Jekyll 시작하기
 커맨드창에서 다음과 같이 실행합니다.
