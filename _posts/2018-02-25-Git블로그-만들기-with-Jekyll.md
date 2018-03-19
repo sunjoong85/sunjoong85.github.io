@@ -30,7 +30,7 @@ $ cd my-awesome-site
 curl -sSL https://get.rvm.io | bash -s stable
 rvm list known
 rvm install ruby-2.4.1
-vm use ruby-2.4.1 --default
+rvm use ruby-2.4.1 --default
 ```
 
 ## Github repository 연결하기
