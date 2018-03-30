@@ -136,6 +136,9 @@ self.addEventListener('fetch', function(event) {
 
 그래서 serviceWorker.js가 변경되더라도 처음 화면 리프레시가 발생하더라도 변경사항이 반영되지 않습니다. 이후 재방문시에 변경된 화면을 확인할 수 있습니다.
 
+## 이전 캐시 지우기
+//작업중
+
 # 이슈 해결
 1. 로컬 SSL을 사용하는 경우 (Self Signed SSL)
 인증되지 않은 SSL의 경우 서비스 워커가 생성되지 않습니다. (크롬)
