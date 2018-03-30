@@ -106,12 +106,12 @@ self.addEventListener('fetch', function(event) {
     event.respondWith(
         caches.match(event.request)
         .then(function(response) {
-                // Cache hit - return response
-                console.log("response " , response);
+
                 if (response) { //cache found don't hit to server
                     return response;
                 }
-                console.log("is not match ??? fetch again : " , event);
+
+                //request to server
                 return fetch(event.request);
             }
         ).catch(function(){
@@ -151,3 +151,5 @@ https://ssl.comodo.com/free-ssl-certificate.php
 [HTTP/2 Server Push and Service Workers: The Perfect Partnership](https://24ways.org/2016/http2-server-push-and-service-workers/)  
 [Service Workers](https://developers.google.com/web/fundamentals/primers/service-workers/?hl=ko)  
 [Service Worker API](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API)
+
+{% include disqus.html %}
