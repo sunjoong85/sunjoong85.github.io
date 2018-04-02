@@ -125,6 +125,7 @@ self.addEventListener('fetch', function(event) {
 //작업중
 
 # 서버의 최신상태 반영하기
+## ServiceWorker.js를 변경
 서비스 워커 파일을 업데이트 합니다. 브라우저는 serviceWorker.js를 로드할 것이고 1바이트라도 차이가 난다면 자원들을 로드할 것입니다.
 
 새로운 자원이 로드되면 다음과 같이 동작합니다.
@@ -133,11 +134,63 @@ self.addEventListener('fetch', function(event) {
 기존 서비스 워커가 실행되어야 오프라인 모드에서도 웹 어플리케이션이 정상 동작합니다.
 2. 변경된 서비스 워커는 새로운 자원들을 로드하여 캐쉬한다.
 브라우저를 다시 방문하게되면 새롭게 업데이트된 자원들을 사용하게 됩니다
+3. 현재 웹페이지를 다시 방문할 때 새롭게 캐쉬된 자원들을 사용할 수 있습니다.
 
-그래서 serviceWorker.js가 변경되더라도 처음 화면 리프레시가 발생하더라도 변경사항이 반영되지 않습니다. 이후 재방문시에 변경된 화면을 확인할 수 있습니다.
+그래서 serviceWorker.js가 변경되어도 변경사항이 바로 반영되지 않습니다. 이후 재방문시에 변경된 화면을 확인할 수 있습니다. (브라우저 새로고침을 여러번 호출하여도 제때 반영이 되지 않는 경우가 있습니다. 확실한 건 새로운 탭 또는 브라우저 재구동시에는 무조건 반영이 됩니다.)
+
+[참고]
+Chrome 디버거를 사용하여 변경사항을 즉시 반영하는 방법
+1. skipWaiting 클릭
+즉시 새로운 서비스 워커를 설치하고 반영합니다. 새로운 로드한 자원이 즉시 반영됩니다.
+2. Update on reload 체크박스 선택
+테스트를 쉽게 하기 위해 Chrome디버거를 다음과 같이 설정할 수 있습니다. 이 경우 새로고침을 수행하면 즉시 변경사항이 반영됩니다.
+
 
 ## 이전 캐시 지우기
-//작업중
+이전 캐시 자체를 제거하고 싶은 경우가 있습니다. 아래와 같은 시나리오를 보
+```
+//기존
+var urlsToCache = [
+    '/',
+    '/lib/jquery.js',
+    '/lib/lodash.js',
+    '/lib/myscript.js',
+    '/lib/mystyle.css',
+];
+
+//변경
+var urlsToCache = [
+    '/',
+    '/lib/jquery.js',
+    '/lib/lodash.js',
+    '/lib/myscript2.js',
+    '/lib/mystyle2.css',
+];
+```
+
+myscript2.js와 mystyle2.css가 새롭게 캐시가 되더라도 이전에 캐시한 myscript.js, myscript.css는 제거되지 않습니다.
+위의 경우 이전에 캐시한 항목을 제거하고 새롭게 캐시를 합니다. 이때 'activate' 이벤트를 활용합니다.
+
+'activate'이벤트는 브라우저의 새로운 탭 또는 아예 브라우저를 재시작하여 해당 페이지를 재방문 했을 때 서비스 워커가 다시 설치되고 나서 호출됩니다. (Update on reload체크가 활성화 되어 있다면 즉시 반영됩니다.)
+
+이전 캐시를 제거하는 코드는 다음과 같습니다.
+```
+var CACHE_NAME = 'my-site-cache-v2';  // cache 버전을 v1->v2로 변경합니다.
+
+self.addEventListener('activate', event => {
+    event.waitUntil(
+        caches.keys().then(function(cacheNames) {
+            for(var i=0, len=cacheNames.length; i<len; i++) {
+                if(cacheNames[i] !== CACHE_NAME) {  //현재 캐시 버전과 다른 경우 제거
+                  caches.delete(cacheNames[i]);
+                }
+            }
+        })
+    );
+});
+```
+
+위의 코드는 'activate'이벤트가 호출되고 즉시 이전 캐시를 제거할 것입니다.
 
 # 이슈 해결
 1. 로컬 SSL을 사용하는 경우 (Self Signed SSL)
@@ -152,7 +205,7 @@ https://ssl.comodo.com/free-ssl-certificate.php
 # Reference
 
 [HTTP/2 Server Push and Service Workers: The Perfect Partnership](https://24ways.org/2016/http2-server-push-and-service-workers/)  
-[Service Workers](https://developers.google.com/web/fundamentals/primers/service-workers/?hl=ko)  
+[Service Workers](https://developers.google.com/web/fundamentals/primers/service-workers/?hl=ko)
 [Service Worker API](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API)
 
 {% include disqus.html %}

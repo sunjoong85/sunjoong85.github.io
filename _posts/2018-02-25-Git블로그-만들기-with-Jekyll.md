@@ -62,4 +62,6 @@ url: "https://sunjoong85.github.io"
 ## 댓글 기능 추가하기
 [disqus](https://disqus.com/)를 내 블로그에 추가할 수 있습니다. 다음 블로그를 참고하면 도움을 받을 수 있습니다. [Jekyll 블로그에 Disqus 붙이기](https://cjh5414.github.io/Disqus/)
 
+## 검색 엔진에 노출시키기
+[지킬 블로그 구글 검색 가능하게 하는 방법](https://wayhome25.github.io/etc/2017/02/20/google-search-sitemap-jekyll/)을 참고합니다.
 {% include disqus.html %}
