@@ -1,5 +1,5 @@
 ---
-title: Progressive Web App - HTTP2
+title: Progressive Web App - HTTP2와 서버 푸시(Server Push)
 layout: post
 categories: PWA
 ---
