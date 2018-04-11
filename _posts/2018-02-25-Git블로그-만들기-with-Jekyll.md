@@ -47,7 +47,7 @@ git push -u origin master
 setting 에서 git page 설정을 추가하면 내 블로그 url이 생성됩니다.
 (저는 jekyll-test 로 repository를 생성했습니다.)
 
-![Git Setting에서 page 설정]({{ "/_image/git블로그만들기/gitpage_setting.png"}})
+![Git Setting에서 page 설정]({{ "/assets/git블로그만들기/gitpage_setting.png"}})
 
 다시 my-awesome-site 폴더로 돌아가서 `_config.yml` 파일을 열어 봅니다.
 `baseurl`과 `url` 속성을 수정해줍니다.
