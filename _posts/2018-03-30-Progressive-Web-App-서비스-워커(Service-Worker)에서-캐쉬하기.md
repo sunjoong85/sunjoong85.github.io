@@ -125,7 +125,7 @@ self.addEventListener('fetch', function(event) {
 //작업중
 
 # 서버의 최신상태 반영하기
-## ServiceWorker.js를 변경
+### ServiceWorker.js를 변경
 서비스 워커 파일을 업데이트 합니다. 브라우저는 serviceWorker.js를 로드할 것이고 1바이트라도 차이가 난다면 자원들을 로드할 것입니다.
 
 새로운 자원이 로드되면 다음과 같이 동작합니다.
@@ -146,8 +146,8 @@ Chrome 디버거를 사용하여 변경사항을 즉시 반영하는 방법
 테스트를 쉽게 하기 위해 Chrome디버거를 다음과 같이 설정할 수 있습니다. 이 경우 새로고침을 수행하면 즉시 변경사항이 반영됩니다.
 
 
-## 이전 캐시 지우기
-이전 캐시 자체를 제거하고 싶은 경우가 있습니다. 아래와 같은 시나리오를 보
+### 이전 캐시 지우기
+이전 캐시 자체를 제거하고 싶은 경우가 있습니다. 아래와 같은 시나리오를 보겠습니다.
 ```
 //기존
 var urlsToCache = [
@@ -200,7 +200,7 @@ self.addEventListener('activate', event => {
 2. SSL
 로컬 테스트를 위해서 Self Signed SSL 키를 생성할 수도 있지만 가급적 인증된 SSL키를 발급받도록 합니다.
 특정 브라우저에서는 미인증된 키의 경우 서비스 워커와 서버 푸시를 사용할 수 없습니다.   
-https://ssl.comodo.com/free-ssl-certificate.php
+https://letsencrypt.org/getting-started/
 
 # Reference
 
