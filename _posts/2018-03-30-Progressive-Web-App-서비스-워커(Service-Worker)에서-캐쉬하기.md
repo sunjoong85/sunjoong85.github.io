@@ -137,8 +137,10 @@ self.addEventListener('fetch', function(event) {
 서버로부터 로드한 데이터가 0Byte임을 확인할 수 있습니다.
 
 # 서버의 최신상태 반영하기
+캐시하고 있는 JS, HTML, CSS 등이 변경되면 새로운 자원을 다시 로드해야합니다.
+
 ### ServiceWorker.js를 변경
-서비스 워커 파일을 업데이트 합니다. 브라우저는 serviceWorker.js를 로드할 것이고 1바이트라도 차이가 난다면 자원들을 로드할 것입니다.
+serviceWorker.js 파일을 변경합니다. 브라우저는 serviceWorker.js를 로드할 것이고 1바이트라도 차이가 난다면 자원들을 로드할 것입니다.
 
 새로운 자원이 로드되면 다음과 같이 동작합니다.
 
@@ -150,13 +152,8 @@ self.addEventListener('fetch', function(event) {
 
 그래서 serviceWorker.js가 변경되어도 변경사항이 바로 반영되지 않습니다. 이후 재방문시에 변경된 화면을 확인할 수 있습니다. (브라우저 새로고침을 여러번 호출하여도 제때 반영이 되지 않는 경우가 있습니다. 확실한 건 새로운 탭 또는 브라우저 재구동시에는 무조건 반영이 됩니다.)
 
-[참고]
-Chrome 디버거를 사용하여 변경사항을 즉시 반영하는 방법
-1. skipWaiting 클릭
-즉시 새로운 서비스 워커를 설치하고 반영합니다. 새로운 로드한 자원이 즉시 반영됩니다.
-2. Update on reload 체크박스 선택
-테스트를 쉽게 하기 위해 Chrome디버거를 다음과 같이 설정할 수 있습니다. 이 경우 새로고침을 수행하면 즉시 변경사항이 반영됩니다.
-
+> 크롬 디버거의 Update on reload 체크박스 선택을 하면 새로고침 시 변경사항이 즉시 반영됩니다.
+![Update on reload]({{ "/assets/service_worker/sw_update.png"}})
 
 ### 이전 캐시 지우기
 이전 캐시 자체를 제거하고 싶은 경우가 있습니다. 아래와 같은 시나리오를 보겠습니다.
