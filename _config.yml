@@ -19,7 +19,7 @@ email: sunjoong85@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
 
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "sunjoong85.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://sunjoong85.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: sunjoong85
 github_username:  sunjoong85
 
