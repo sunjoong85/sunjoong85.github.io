@@ -122,7 +122,8 @@ self.addEventListener('fetch', function(event) {
 ```
 
 # 크롬 디버깅에서 확인
-[ServiceWorker에서 로드 확인]({{ "/assets/service_worker/service_worker.png"}})
+![ServiceWorker에서 로드 확인]({{ "/assets/service_worker/service_worker.png"}})
+서버로부터 로드한 데이터가 0Byte임을 확인할 수 있습니다.
 
 # 서버의 최신상태 반영하기
 ### ServiceWorker.js를 변경
