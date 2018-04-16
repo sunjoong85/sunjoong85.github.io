@@ -151,6 +151,6 @@ function getFile(reqPath) {
 
 # Reference
 O'Reilly Fluent 2017 Web Performance, Alkamai  
-https://www.smashingmagazine.com/2017/04/guide-http2-server-push/
+[http2 server push](https://www.smashingmagazine.com/2017/04/guide-http2-server-push/)
 
 {% include disqus.html %}
