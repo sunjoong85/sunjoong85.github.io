@@ -62,16 +62,11 @@ h2server.listen(3001);
 // file push
 function push(stream, reqPath) {
     const file = getFile(reqPath);
-    if (!file) {
-        //TODO File 이 없을 때의 처리
-        console.log("file not found");
-        return;
-    }
 
     stream.pushStream({ ':path' : reqPath }, (err, pushStream) => {
         pushStream.respondWithFD(file.fd, file.headers);
 
-        //브라우저가 push된 자원을 거절하는 경우 간헐적으로 TCP 에러가 납니다. 확실한 해결법은 찾지 못 했습니다.
+        //브라우저가 push된 자원을 거절하는 경우 TCP 에러가 납니다. (또는 pending 현상) 확실한 해결법은 찾지 못 했습니다.
         pushStream.once('error', (error) => {
             console.log('Push Error : ' + error.code);
         })
@@ -95,6 +90,7 @@ h2server.on('stream', (stream, headers) => {
     if(reqPath === 'index.html') {
 
         // index.html을 전달하면서 필요한 자원들을 push합니다. 서버는 무엇을 클라이언트에 전달할지 알고 있어야합니다.
+        // push부분을 비동기로 처리하면 더 빠르게 응답을 보낼 수 있습니다. 현재는 sync로 구현
         push(stream, '/app/lib/jquery.js');
         push(stream, '/app/lib/lodash.js');
         push(stream, '/app/lib/bootstrap.min.css');
