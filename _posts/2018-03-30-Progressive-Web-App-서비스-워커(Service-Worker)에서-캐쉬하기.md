@@ -205,7 +205,7 @@ self.addEventListener('activate', event => {
 
 # 정리
 서비스 워커는 빠른 웹 성능을 위해 `공격적으로 캐시하라(Cache Aggressively)`컨셉의 가장 중요한 요소입니다. 더불어 PWA 컨셉에서 오프라인 동작을 가능하게 해주는 핵심 요소입니다.
-더불어 HTTP2 서버 푸시(Server Push)와 결합하면 더욱 강력햅니다.
+더불어 HTTP2 서버 푸시(Server Push)와 결합하면 더욱 강력해 집니다.
 
 # Reference
 [HTTP/2 Server Push and Service Workers: The Perfect Partnership](https://24ways.org/2016/http2-server-push-and-service-workers/)  
