@@ -22,7 +22,7 @@ categories: PWA
 서비스워커를 사용하면 웹 어플리케이션이 마치 네이티브 앱 처럼 오프라인에서 동작할 수 있게 됩니다. 이 부분은 다음에 다시 다루겠습니다.
 
 # 서비스워커 구현
-서비스 워커 HTTPs에서만 동작합니다. 로컬에서 HTTPs key를 발급받고 테스트하는 방법은 하단의 [이슈해결](#이슈해결)을 참조합니다.
+서비스 워커 HTTPs에서만 동작합니다. 로컬에서 HTTPs key를 발급받고 테스트하는 방법은 하단의 [문제 해결](#문제해결)을 참조합니다.
 
 ## 등록
 브라우저에서 서비스 워커 객체를 활성화 하려면 먼저 serviceWorker.js파일을 등록해야합니다. serviceWorker.js에는 서비스 워커가 무엇을 캐쉬해야하는지 알려줍니다. serviceWorker.js를 작성하는 방법은 뒤에서 다루겠습니다. 우선 다음과 같이 index.html에 script를 추가합니다.
@@ -122,7 +122,18 @@ self.addEventListener('fetch', function(event) {
 ```
 
 # 크롬 디버깅에서 확인
-![ServiceWorker에서 로드 확인]({{ "/assets/service_worker/service_worker.png"}})
+### 1. 웹 페이지 최초 방문
+![ServiceWorker 객체 확인]({{ "/assets/service_worker/first_load.png"}})
+최초의 방문에서는 서버에서 자원을 내려받습니다. 샘플은 H2 기반에서 동작합니다만 HTTP1을 사용해도 무방합니다.
+
+### 2. 서비스 워커 객체 생성 확인
+![ServiceWorker 객체 확인]({{ "/assets/service_worker/sw_object.png"}})
+
+### 3. 서비스 워커가 캐시하고 있는 리스트
+![ServiceWorker 캐시 리스트]({{ "/assets/service_worker/sw_cache_list.png"}})
+
+### 4. 웹 페이지 재방문
+![ServiceWorker 캐시 사용]({{ "/assets/service_worker/service_worker.png"}})
 서버로부터 로드한 데이터가 0Byte임을 확인할 수 있습니다.
 
 # 서버의 최신상태 반영하기
@@ -193,7 +204,7 @@ self.addEventListener('activate', event => {
 
 위의 코드는 'activate'이벤트가 호출되고 즉시 이전 캐시를 제거할 것입니다.
 
-# 이슈 해결
+# 문제 해결 {#문제해결}
 1. 로컬 SSL을 사용하는 경우 (Self Signed SSL)
 인증되지 않은 SSL의 경우 서비스 워커가 생성되지 않습니다. (크롬)
 맥 사용자는 [Bypass Chrome SSL/certificate blockades](http://hints.macworld.com/article.php?story=20140510112547107)를 참고하여 크롬을 실행하시면 됩니다.
