@@ -9,10 +9,9 @@ HTTP2의 서버 푸시를 활용하면 자원(JS, CSS, Image 등)을 하나의 T
 # 빠른 로딩이 필요한 이유
 다음 그림은 웹 페이지를 요청할 때 브라우저에서 일어나는 일입니다.
 
-![로딩 비용 - Alkamai Oreilly fluent]({{ "/assets/server_push/bottleneck.png"}})
+![로딩 비용 - Alkamai O'Reilly fluent]({{ "/assets/server_push/bottleneck.png"}})
 HTML, JavaScript, CSS를 빠르게 로딩할수록 브라우저는 더 빨리 렌더링 작업을 합니다.
 > [참고] 이 외에도 로딩 성능을 빠르게 하기 위해 PRPL 패턴, mini이미지 압축 등 어려 기술들이 있습니다.
-
 
 자원을 빠르게 로딩할 수 있다는 것은 브라우저가 더 빠른 시간에 렌더링 프로세스를 시작할 수 있음을 의미합니다. 유저는 웹 페이지와 더 빠르게 인터렉션할 수 있게 됩니다.
 
@@ -144,6 +143,7 @@ function getFile(reqPath) {
 ![server push 확인]({{ "/assets/server_push/server_push.png"}})
 
 # HTTP2 프로토콜도 확인 가능
+`chrome://net-internals`을 사용하면 HTTP2 프로토콜을 확인할 수 있습니다.
 ![HTTP2 프로토콜 확인]({{ "/assets/server_push/chrome_netinternal.png"}})
 
 # 정리
