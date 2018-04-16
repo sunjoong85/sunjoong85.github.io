@@ -201,7 +201,7 @@ self.addEventListener('activate', event => {
 2. SSL
 로컬 테스트를 위해서 Self Signed SSL 키를 생성할 수도 있지만 가급적 인증된 SSL키를 발급받도록 합니다.
 특정 브라우저에서는 미인증된 키의 경우 서비스 워커와 서버 푸시를 사용할 수 없습니다.   
-(Let's Encrypt)[https://letsencrypt.org/getting-started/]를 사용하면 90일간 무료로 이용할 수 있는 SSL 키를 발급받을 수 있습니다.
+[Let's Encrypt](https://letsencrypt.org/getting-started/])를 사용하면 90일간 무료로 이용할 수 있는 SSL 키를 발급받을 수 있습니다.
 
 
 # Reference
