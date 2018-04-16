@@ -7,7 +7,7 @@ categories: PWA
 # 서비스 워커(Service Worker)
 서비스 워커는 웹 어플리케이션 백그라운드에서 동작합니다. 즉 클라이언트와 서버 사이의 미들웨어라고 보면 됩니다. 자바스크립트로 작성되고 별도의 설치가 필요 없습니다. 주요 기능은 Caching, Push Notification, Background sync가 있습니다.
 
-서비스워커의 캐쉬 기능을 사용하면 서버에 불필요한 요청을 보낼 필요가 없습니다. '즉시 모든 자원을 로딩'을 가능하게 해주는 주요 기능입니다.
+서비스워커의 캐쉬 기능을 사용하면 서버에 불필요한 요청을 보낼 필요가 없습니다. '즉시 모든 자원을 로딩(Instantly load everything)'을 가능하게 해주는 주요 기능입니다.
 
 >HTTP2의 서버 푸시(Server Push)를 사용하면 index.html을 전달 받을 때(최초의 요청) 웹 어플리케이션에서 필요한 자원(JS, CSS, Image 등)을 함께 보낼 수 있습니다. Connection을 여러번 맺는 라운드 트립 비용이 발생하지 않기 때문에 브라우저는 상당히 빠르게 화면 렌더링을 시작할 수 있습니다. 단, 모든 요청에 대해서 서버 푸시를 한다면 서버 자원 낭비가 됩니다. 그래서 서버 푸시가 서비스 워커의 캐시 가능을 만나면 매우 강력해 집니다.
 
@@ -203,9 +203,11 @@ self.addEventListener('activate', event => {
 특정 브라우저에서는 미인증된 키의 경우 서비스 워커와 서버 푸시를 사용할 수 없습니다.   
 [Let's Encrypt](https://letsencrypt.org/getting-started/])를 사용하면 90일간 무료로 이용할 수 있는 SSL 키를 발급받을 수 있습니다.
 
+# 정리
+서비스 워커는 빠른 웹 성능을 위해 `공격적으로 캐시하라(Cache Aggressively)`컨셉의 가장 중요한 요소입니다. 더불어 PWA 컨셉에서 오프라인 동작을 가능하게 해주는 핵심 요소입니다.
+더불어 HTTP2 서버 푸시(Server Push)와 결합하면 더욱 강력햅니다.
 
 # Reference
-
 [HTTP/2 Server Push and Service Workers: The Perfect Partnership](https://24ways.org/2016/http2-server-push-and-service-workers/)  
 [Service Workers](https://developers.google.com/web/fundamentals/primers/service-workers/?hl=ko)
 [Service Worker API](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API)
