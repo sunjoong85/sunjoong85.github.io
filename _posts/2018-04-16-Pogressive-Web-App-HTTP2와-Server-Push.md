@@ -87,9 +87,7 @@ h2server.on('stream', (stream, headers) => {
     const reqPath = headers[':path'] === '/' ? 'index.html' : headers[':path'];
     const file = getFile(reqPath);
 
-    stream.session.state;
     if(reqPath === 'index.html') {
-
         // index.html을 전달하면서 필요한 자원들을 push합니다. 서버는 무엇을 클라이언트에 전달할지 알고 있어야합니다.
         // push부분을 비동기로 처리하면 더 빠르게 응답을 보낼 수 있습니다. 현재는 sync로 구현
         push(stream, '/app/lib/jquery.js');
@@ -105,6 +103,7 @@ h2server.on('stream', (stream, headers) => {
         stream.end();
         return;
     }
+    
     stream.respondWithFD(file.fd, file.headers);
 
     stream.once('close', () => {
