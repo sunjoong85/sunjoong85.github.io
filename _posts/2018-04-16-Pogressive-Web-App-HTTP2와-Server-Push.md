@@ -2,6 +2,7 @@
 title: Progressive Web App - HTTP2 서버 푸시(Server Push)
 layout: post
 categories: PWA, HTTP2
+comments : true
 ---
 # 서버 푸시(Server Push)
 HTTP2의 서버 푸시를 활용하면 자원(JS, CSS, Image 등)을 하나의 TCP connection으로 클라이언트에 전달할 수 있습니다. 네트워크 활용도를 높여주고 빠른 로딩을 가능하게 합니다.
@@ -103,7 +104,7 @@ h2server.on('stream', (stream, headers) => {
         stream.end();
         return;
     }
-    
+
     stream.respondWithFD(file.fd, file.headers);
 
     stream.once('close', () => {

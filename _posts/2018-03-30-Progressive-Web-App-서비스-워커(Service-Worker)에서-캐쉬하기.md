@@ -2,6 +2,7 @@
 title: Progressive Web App - 서비스 워커(Service Worker)에서 캐쉬하기
 layout: post
 categories: PWA
+comments : true
 ---
 
 # 서비스 워커(Service Worker)
